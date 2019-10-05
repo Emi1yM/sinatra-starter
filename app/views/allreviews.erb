@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	</head>
+    <body>
+    <%Customer.create(name: @username)%>
+    <%Business.create(name:@business)%>
+    <% Review.create(business_id: @business.id, customer_id: @username.id, review: "Entrance: @comments1
+  Navigation: @comments2
+  Bathrooms: @comments3
+  Product/Service: @comments4
+  Employee Interaction: @comments5")%>
+
+    <%=Review.all%>
+    </body>
+    </html>

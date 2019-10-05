@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html>
+	</head>
+    <body>
+<form action="/reviewed" method="post">
+<h2>Rate each of these categories on a scale of 1-5, 1 being completely inaccessible for you and 5 being as accessible as possible.</h2>
+  Username: <input type="text" name="username"><br>
+ Business: <input type="text" name="business"><br>
+
+<h3>Entrance</h3>
+<h4>For example: 
+<ul>
+<li>Was there a ramp entrance at the front?
+<li>Or, were there labeled directions to the ramp entrance?
+</ul></h4>
+<input type="radio" name="rating" value="1"> 1
+<input type="radio" name="rating" value="2"> 2
+<input type="radio" name="rating" value="3"> 3
+<input type="radio" name="rating" value="4"> 4
+<input type="radio" name="rating" value="5"> 5<br>
+
+
+<div>
+<textarea name="comments1" id="comments1" style="font-family:sans-serif;font-size:1.2em;">
+Comments?
+</textarea>
+</div>
+
+<h3>Navigation</h3>
+<h4>For example: 
+<ul>
+<li>Was there a lowered counter for wheelchair access? Was it clutter free? 
+<li>Was there a place for wheelchair seating? 
+<li>Are the steps brightly marked?</ul></h4>
+<input type="radio" name="rating" value="1"> 1
+<input type="radio" name="rating" value="2"> 2
+<input type="radio" name="rating" value="3"> 3
+<input type="radio" name="rating" value="4"> 4
+<input type="radio" name="rating" value="5"> 5<br>
+
+
+<div>
+<textarea name="comments2" id="comments2" style="font-family:sans-serif;font-size:1.2em;">
+Comments?
+</textarea>
+</div>
+
+<h3>Bathrooms</h3>
+<h4>For example: 
+<ul>
+<li>Was there a braille label? 
+<li>Was the accessible bathroom in the front or the back? 
+<li>Was there an accessible bathroom at all?</h4>
+<input type="radio" name="rating" value="1"> 1
+<input type="radio" name="rating" value="2"> 2
+<input type="radio" name="rating" value="3"> 3
+<input type="radio" name="rating" value="4"> 4
+<input type="radio" name="rating" value="5"> 5<br>
+
+
+<div>
+<textarea name="comments3" id="comments3" style="font-family:sans-serif;font-size:1.2em;">
+Comments?
+</textarea>
+</div>
+
+<h3>Product/Service</h3>
+<h4>For example: 
+<ul>
+<li>Did they have a braille menu? 
+<li>Did they have a pool lift?</ul></h4>
+<input type="radio" name="rating" value="1"> 1
+<input type="radio" name="rating" value="2"> 2
+<input type="radio" name="rating" value="3"> 3
+<input type="radio" name="rating" value="4"> 4
+<input type="radio" name="rating" value="5"> 5<br>
+
+
+<div>
+<textarea name="comments4" id="comments4" style="font-family:sans-serif;font-size:1.2em;">
+Comments?
+</textarea>
+</div>
+
+<h3>Employee Interaction</h3>
+<h4>For example: 
+<ul>
+<li>Did they use person first language? 
+<li>Did they read the menu for you when asked? 
+<li>Did they allow service animals?</ul></h4>
+<input type="radio" name="rating" value="1"> 1
+<input type="radio" name="rating" value="2"> 2
+<input type="radio" name="rating" value="3"> 3
+<input type="radio" name="rating" value="4"> 4
+<input type="radio" name="rating" value="5"> 5<br>
+
+
+<div>
+<textarea name="comments5" id="comments5" style="font-family:sans-serif;font-size:1.2em;">
+Comments?
+</textarea>
+</div>
+<input type="submit" />
+</form>
+
+</body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Form</h2>
+<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
